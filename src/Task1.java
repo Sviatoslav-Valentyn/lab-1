@@ -10,14 +10,14 @@ public class Task1 {
 
     public static void main(String[] args) {
         String[] arr = {"сafe", "сheck", "ссс", "сссс" , "сollect", "сall"};
-        char letter = 'с';
+        char с = 'с';
         System.out.println("Before: ");
         for (String str : arr) {
-            System.out.println(str + " " + numberOfSymbol(str, letter));
+            System.out.println(str + " " + numberOfSymbol(str, с));
         }
         for (int i = 0; i < arr.length-1; i++) {
             for (int j = 0; j < arr.length - i - 1; j++) {
-                if (isGreat(arr[j], arr[j+1], letter)) {
+                if (isGreat(arr[j], arr[j+1], с)) {
                     var tmp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = tmp;
@@ -27,7 +27,7 @@ public class Task1 {
         System.out.println();
         System.out.println("After: ");
         for (String str : arr) {
-            System.out.println(str + " " + numberOfSymbol(str, letter));
+            System.out.println(str + " " + numberOfSymbol(str, с));
         }
     }
 }
