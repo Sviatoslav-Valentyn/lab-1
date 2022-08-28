@@ -1,5 +1,5 @@
 public class Task3_Cycle {
-    public static int factorial(int n)
+    public static int factorial(final int n)
     {
         int result = 1;
         for (int i = 1; i <= n; ++i){
@@ -7,7 +7,7 @@ public class Task3_Cycle {
         }
         return result;
     }
-    public static void main(String[] args){
+    public static void main(final String[] args){
         System.out.println(factorial(4));
     }
 }

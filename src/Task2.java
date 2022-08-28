@@ -1,5 +1,5 @@
 public class Task2 {
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         String string = "absolute";
         System.out.println("Word before: " + string);
         char symbol = 'b';
