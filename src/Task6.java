@@ -2,7 +2,7 @@ import java.util.Objects;
 
 public class Task6 {
     public static void main(final String[] args) {
-        User user = new User();
+        final User user = new User();
         user.setFirstName("Sviatoslav-Valentyn");
         user.setLastName("Hvozdyk");
         user.setAge(18);

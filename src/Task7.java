@@ -1,5 +1,5 @@
 public class Task7 {
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         for (int i = 0; i < products.length; i++){
             System.out.println("Product: " + products[i].getProduct() +
                     "  " + products[i].getNumber() + "pieces = " + products[i].priceByQuantity() + "₴");

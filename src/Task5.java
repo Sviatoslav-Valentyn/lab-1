@@ -2,7 +2,7 @@ public class Task5 {
     public static void main(final String[] args) {
         final int n = 2;
         System.out.println("Before");
-        int[][] a = new int[n][n];
+        final int[][] a = new int[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 a[i][j] = n * i + j;
@@ -12,7 +12,7 @@ public class Task5 {
         }
         for (int i = 0; i < n; i++) {
             for (int j = i+1; j < n; j++) {
-                int temp = a[i][j];
+                final int temp = a[i][j];
                 a[i][j] = a[j][i];
                 a[j][i] = temp;
             }

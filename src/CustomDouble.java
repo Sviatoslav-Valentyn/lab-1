@@ -8,7 +8,7 @@ public class CustomDouble {
         return fractional;
     }
 
-    public void setFractional(double fractional) {
+    public void setFractional(final double fractional) {
         this.fractional = fractional;
     }
 
@@ -16,15 +16,15 @@ public class CustomDouble {
         return integer;
     }
 
-    public void setInteger(int integer) {
+    public void setInteger(final int integer) {
         this.integer = integer;
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CustomDouble that = (CustomDouble) o;
+        final CustomDouble that = (CustomDouble) o;
         return integer == that.integer && Double.compare(that.fractional, fractional) == 0;
     }
 
@@ -38,17 +38,22 @@ public class CustomDouble {
         this.fractional = decimal;
     }
 
+    public CustomDouble(final double result) {
+        this.integer = (int) result;
+        this.fractional = result - integer;
+    }
     public double toDouble() {
         return (double) integer + fractional;
     }
-
-    public CustomDouble sumOfNumbers(final CustomDouble numeric) {
-        return new CustomDouble(integer + numeric.integer, fractional + numeric.fractional);
+    public CustomDouble add (final CustomDouble numeric) {
+        final double result = this.toDouble() + numeric.toDouble();
+        return new CustomDouble(result);
     }
 
 
-    public CustomDouble differenceOfNumbers(final CustomDouble numeric) {
-        return new CustomDouble(integer - numeric.integer, fractional - numeric.fractional);
+    public CustomDouble subtract(final CustomDouble numeric) {
+        final double result = this.toDouble() - numeric.toDouble();
+        return new CustomDouble(result);
     }
 
     public String toString() {

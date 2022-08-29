@@ -1,18 +1,18 @@
 public class ProductNumber {
     private Product product;
-    private int number;
+    private int amount;
 
     public ProductNumber(final Product product, final int number) {
         this.product = product;
-        this.number = number;
+        this.amount = number;
     }
 
     public int getNumber() {
-        return number;
+        return amount;
     }
 
     public void setNumber(final int number) {
-        this.number = number;
+        this.amount = number;
     }
 
     public Product getProduct() {
@@ -23,6 +23,6 @@ public class ProductNumber {
         this.product = product;
     }
     public int priceByQuantity(){
-        return product.getPrice() * number;
+        return product.getPrice() * amount;
     }
 }
