@@ -1,10 +1,10 @@
 public class Task5 {
     public static void main(final String[] args) {
-        final int n = 2;
+        final int n = 4;
         System.out.println("Before");
         final int[][] a = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length; j++) {
                 a[i][j] = n * i + j;
                 System.out.printf("%4d", a[i][j]);
             }

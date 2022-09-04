@@ -2,7 +2,7 @@ import java.util.Objects;
 
 public class Room {
     private TypeRoom typeRoom;
-    private String sniezka;
+    private String color;
     private int numberOfDoors;
     private int numberOfWindows;
     private int numberOfFurniture;
@@ -13,12 +13,12 @@ public class Room {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         final Room room = (Room) o;
-        return numberOfDoors == room.numberOfDoors && numberOfWindows == room.numberOfWindows && numberOfFurniture == room.numberOfFurniture && numberOfChandeliers == room.numberOfChandeliers && typeRoom == room.typeRoom && sniezka.equals(room.sniezka);
+        return numberOfDoors == room.numberOfDoors && numberOfWindows == room.numberOfWindows && numberOfFurniture == room.numberOfFurniture && numberOfChandeliers == room.numberOfChandeliers && typeRoom == room.typeRoom && color.equals(room.color);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(typeRoom, sniezka, numberOfDoors, numberOfWindows, numberOfFurniture, numberOfChandeliers);
+        return Objects.hash(typeRoom, color, numberOfDoors, numberOfWindows, numberOfFurniture, numberOfChandeliers);
     }
 
     public TypeRoom getTypeRoom() {
@@ -29,12 +29,12 @@ public class Room {
         this.typeRoom = typeRoom;
     }
 
-    public String getSniezka() {
-        return sniezka;
+    public String getColor() {
+        return color;
     }
 
-    public void setSniezka(final String sniezka) {
-        this.sniezka = sniezka;
+    public void setColor(final String color) {
+        this.color = color;
     }
 
     public int getNumberOfDoors() {
@@ -69,9 +69,9 @@ public class Room {
         this.numberOfChandeliers = numberOfChandeliers;
     }
 
-    public Room(final String sniezka, final TypeRoom typeRoom, final int numberOfDoors, final int numberOfWindows,
+    public Room(final String color, final TypeRoom typeRoom, final int numberOfDoors, final int numberOfWindows,
                 final int numberOfFurniture, final int numberOfChandeliers)  {
-        this.sniezka = sniezka;
+        this.color = color;
         this.typeRoom = typeRoom;
         this.numberOfDoors = numberOfDoors;
         this.numberOfWindows = numberOfWindows;
@@ -120,15 +120,15 @@ public class Room {
             System.out.println("Impossible take away Chandeliers");
         }
     }
-    public void sniezkaInRoom(final String sniezka) {
-        setSniezka(sniezka);
+    public void ColorRoom(final String color) {
+        setColor(color);
     }
 
     public void changeTypeRoom(final TypeRoom typeRoom) {
         setTypeRoom(typeRoom);
     }
     public String toString() {
-        return "Room: "  + "sniezka=" + sniezka + ", typeRoom=" + typeRoom + " " + ", numberOfDoors="
+        return "Room: "  + "color=" + color + ", typeRoom=" + typeRoom + " " + ", numberOfDoors="
                 + numberOfDoors + ", numberOfWindows=" + numberOfWindows + ", numberOfFurniture="
                 + numberOfFurniture + ", numberOfChandeliers=" + numberOfChandeliers;
     }

@@ -17,7 +17,7 @@ public class Task10 {
         System.out.println(house);
 
         System.out.println("After:");
-        house.getRooms().get(0).sniezkaInRoom("Orange");
+        house.getRooms().get(0).ColorRoom("Orange");
         house.getRooms().get(0).demolishDoors();
         house.getRooms().get(0).buildWindows();
         house.getRooms().get(0).takeAwayChandeliers();
