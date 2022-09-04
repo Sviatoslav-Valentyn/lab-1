@@ -21,11 +21,6 @@ public class Task8 {
         System.out.print(numeric1 + " + " + numeric3 + " = " + add3 + "\n");
         System.out.print(numeric3 + " + " + numeric3 + " = " + add4 + "\n");
         System.out.print(numeric4 + " + " + numeric4 + " = " + add5 + "\n");
-        System.out.print("ціле: " + add1.getInteger() + "   " + "дробове: " + add1.getFractional() + "\n");
-        System.out.print("ціле: " + add2.getInteger() + "   " + "дробове: " + add2.getFractional() + "\n");
-        System.out.print("ціле: " + add3.getInteger() + "   " + "дробове: " + add3.getFractional() + "\n");
-        System.out.print("ціле: " + add4.getInteger() + "   " + "дробове: " + add4.getFractional() + "\n");
-        System.out.print("ціле: " + add5.getInteger() + "   " + "дробове: " + add5.getFractional() + "\n");
         System.out.print(numeric1 + " - " + numeric2 + " = " + subtract1 + "\n");
         System.out.print(numeric2 + " - " + numeric3 + " = " + subtract2 + "\n");
         System.out.print(numeric1 + " - " + numeric3 + " = " + subtract3 + "\n");
